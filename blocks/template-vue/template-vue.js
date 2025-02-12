@@ -50,7 +50,7 @@ export default async function decorate(block) {
             return h(compile(template), this.linkData);
           },
         },
-        { newsData: linkData }
+        { linkData: linkData }
       );
     },
   });

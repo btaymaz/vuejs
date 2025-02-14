@@ -2,28 +2,28 @@ import { createApp, compile, h } from "vue";
 
 export default async function decorate(block) {
   const newsListingWrapper = document.createElement("div");
-  const newsData = {};
-  newsData.title = "News Title";
-  newsData.description = "News Description";
-  newsData.link = "https://www.gm.com";
-  newsData.linkText = "View all";
-  newsData.items = [
+  const linkData = {};
+  linkData.title = "Title Lorem";
+  linkData.description = "Sample Description";
+  linkData.link = "https://www.google.com";
+  linkData.linkText = "View all";
+  linkData.items = [
     {
-      title: "News Title",
-      description: "News Description",
-      link: "https://www.gm.com",
+      title: "Link Title",
+      description: "Link Description",
+      link: "https://www.google.com",
       date: "2023-10-01",
     },
     {
-      title: "News Title 2",
-      description: "News Description 2",
-      link: "https://www.gm.com",
+      title: "Link Title 2",
+      description: "Link Description 2",
+      link: "https://www.google.com",
       date: "2023-10-02",
     },
     {
-      title: "News Title 3",
-      description: "News Description 3",
-      link: "https://www.gm.com",
+      title: "Link Title 3",
+      description: "Link Description 3",
+      link: "https://www.google.com",
       date: "2023-10-03",
     },
   ];
@@ -36,13 +36,13 @@ export default async function decorate(block) {
           return h(
             {
               props: {
-                newsData,
+                linkData,
               },
               render() {
-                return h(compile(template), this.newsData);
+                return h(compile(template), this.linkData);
               },
             },
-            { newsData: newsData }
+            { linkData: linkData }
           );
         },
       });
